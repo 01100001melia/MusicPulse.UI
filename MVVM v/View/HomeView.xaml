@@ -1,1 +1,151 @@
+<UserControl x:Class="MusicPulse.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" Height="738" Width="1066">
+
+    <!-- Fixed Column -->
+    <Grid Margin="0,0,366,-57">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1100" />
+        </Grid.ColumnDefinitions>
+
+
+
+        <!-- Main Layout -->
+        <Grid Grid.Column="0" Margin="10,0,366,110">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="851*" />
+                <RowDefinition Height="14*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="373*" />
+                <ColumnDefinition Width="218*" />
+            </Grid.ColumnDefinitions>
+
+
+            <!-- StackPanel inside Border -->
+
+            <StackPanel Margin="0,0,30,116" Grid.ColumnSpan="2">
+                <Border Margin="0,0,0,20" Padding="10">
+                    <StackPanel />
+                </Border>
+                
+                <!-- TextBlock-->
+                <TextBlock Text="Discover" Foreground="White" FontSize="28"
+                           HorizontalAlignment="Left" Margin="15,10,10,0" Height="43" FontWeight="Regular" />
+                
+                
+                <!-- Gradient Border with Rounded Corners -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20" Height="210">
+                    <Border Width="400" Height="300">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="#000000" Offset="0.0" />
+                                <GradientStop Color="#3aa0ff" Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,200" />
+                        </Border.Clip>
+
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Feel the Pulse of Music&#x0a;Discover What the World Is Listening To!"
+                                           Foreground="White" FontSize="18" FontWeight="DemiBold"
+                                           Margin="10,10,10,0" Height="49" />
+                                <Image Source="/Images/die.png" Stretch="Fill"
+                                       Height="140" Margin="256,0,10,0" Width="134" />
+                            </StackPanel>
+                            <Button Content="Listen Now"
+                          Width="102" Height="38"
+                          Background="White" Foreground="Black"
+                          BorderBrush="Transparent" FontSize="16"
+                          HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Click="Button_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}"
+                    CornerRadius="15"
+                    Padding="10">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </Grid>
+                    </Border>
+
+                    <Border Width="200" Height="300" Margin="10,0,0,0" CornerRadius="10">
+                        <Grid>
+                            <Image Source="/Images/Adele.png" Stretch="Fill"
+                                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="201" />
+                            <TextBlock Text="Music connects the world!&#x0a;Feel the rhythm"
+                                       Foreground="White" FontSize="13" FontWeight="DemiBold"
+                                       TextAlignment="Center" VerticalAlignment="Top"
+                                       Margin="-20,23,20,0" Height="37" />
+                        </Grid>
+                    </Border>
+                </StackPanel>
+                
+                <!-- TextBlock-->
+                <TextBlock Text="Trendy Songs" Foreground="White" FontSize="24"
+                           HorizontalAlignment="Left" Margin="5,10,10,0" Height="34"  FontWeight="Regular"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <StackPanel>
+                        <Border Width="150" Height="150" Background="#844eff"
+                                CornerRadius="5" Margin="5">
+                            <Image Source="/Images/wk.png" Stretch="UniformToFill"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Height="150" />
+                        </Border>
+                        <TextBlock Text="The Weeknd, Playboi Carti - Timeless"
+                                   Foreground="White" FontSize="8" HorizontalAlignment="Center"
+                                   Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Border Width="150" Height="150" Background="#844eff"
+                                CornerRadius="5" Margin="5">
+                            <Image Source="/Images/sza.png" Stretch="UniformToFill"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Height="170" Width="150" />
+                        </Border>
+                        <TextBlock Text="SZA - Open Arms"
+                                   Foreground="White" FontSize="10"
+                                   HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Margin="10,0,0,0">
+                        <Border Width="150" Height="150" Background="#844eff"
+                                CornerRadius="5" Margin="5">
+                            <Image Source="/Images/dein.png" Stretch="UniformToFill"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Height="150" Width="150" />
+                        </Border>
+                        <TextBlock Text="Travis Scott - FE!N"
+                                   Foreground="White" FontSize="10"
+                                   HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <StackPanel Margin="10,0,0,0">
+                        <Border Width="150" Height="150" Background="#844eff"
+                                CornerRadius="5" Margin="5">
+                            <Image Source="/Images/ariana.png" Stretch="UniformToFill"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Height="150" Width="150" />
+                        </Border>
+                        <TextBlock Text="Ariana Grande - we can't be friends"
+                                   Foreground="White" FontSize="10"
+                                   HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
+
 
