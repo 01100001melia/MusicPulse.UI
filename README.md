@@ -1,6 +1,6 @@
 # Music Pulse - WPF UI
 Music Pulse is a beautifully designed modern desktop music player interface.
-![preview](./Images/MusicPulse.png)
+ preview project (Images/Music Pulse.png)
 - Navigation panel
 - Search bar
 - Discover banner
