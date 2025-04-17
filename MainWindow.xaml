@@ -1,1 +1,121 @@
+<Window x:Class="MusicPulse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:local="clr-namespace:MusicPulse"
+        xmlns:ViewModel="clr-namespace:MusicPulse.MVVM.ViewModel" 
+        Height="671" Width="931"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        mc:Ignorable="d">
+
+    <!-- Set DataContext for MVVM Binding -->
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <Style x:Key="ModernTextbox" TargetType="TextBox">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="10,5"/>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="#000000" CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="46*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Logo Name -->
+            <TextBlock Text="MusicPulse"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="57,0,0,0" />
+
+            <Button Foreground="White"
+                    FontSize="14"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Height="45"
+                    Width="40"
+                    Margin="0,10,10,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Grid.Row="0" Grid.Column="1">
+                <Button.Content>
+                    <Image Source="Images/Notification_bell.png"
+                           Width="45"
+                           Height="34"
+                           RenderTransformOrigin="-4.944,0.265"/>
+                </Button.Content>
+            </Button>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="574,0,0,0"
+                        Grid.Column="1"
+                        Width="103">
+                <Image Source="Images/profile.png" Width="50" Height="50" Margin="0,0,10,0"/>
+                <TextBlock Text="Anstasia" Foreground="White" FontSize="10" Width="41" Height="16"/>
+            </StackPanel>
+
+            <TextBox x:Name="SearchBox"
+                    Text="Search" Foreground="White" FontWeight="Regular" FontSize="14"
+                     Width="289"
+                     Height="50"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5"
+                     Grid.Column="1"
+                     Style="{StaticResource ModernTextbox}"/>
+
+            <!--Scrollviewr for needed-->
+
+            <ScrollViewer Grid.Row="1"
+                          VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Grid.RowSpan="2">
+                
+                <!-- Navigation Buttons Panel -->
+                <StackPanel>
+                    <Button Content="Home" Foreground="White" FontSize="14" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="50" Margin="0,20,0,0"/>
+                    <Button Content="Songs" Foreground="White" FontSize="14" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="50" Margin="0,10,0,0"/>
+                    <Button Content="Albums" Foreground="White" FontSize="14" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="50" Margin="0,10,0,0"/>
+                    <Button Content="Artists" Foreground="White" FontSize="14" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="50" Margin="0,10,0,0"/>
+                    <Button Content="Liked" Foreground="White" FontSize="14" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="50" Margin="0,10,0,0"/>
+                    <Border Background="#D3D3D3" Height="1" Width="112" Margin="0,5,0,10"/>
+                    <Button Content="Playlists" Foreground="White" FontSize="14" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="50" Margin="0,10,0,0"/>
+                    <Button Content="Setting" Foreground="White" FontSize="14" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="50" Margin="0,10,0,0"/>
+                </StackPanel>
+            </ScrollViewer>
+
+            
+            <!-- Content Control with Binding -->
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10,10,10,10"
+                            Content="{Binding CurrentView}" Grid.RowSpan="2"/>
+        </Grid>
+    </Border>
+</Window>
 
