@@ -31,7 +31,6 @@ MusicPulse/
 Feel free to connect if you'd like to collaborate or need help! 
 
 
-
-
-
+Take a look!
+![UI](https://github.com/user-attachments/assets/ca518f10-363c-4be5-b581-75f841e8a987)
 
