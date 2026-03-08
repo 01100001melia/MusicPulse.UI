@@ -14,5 +14,6 @@ Music Pulse is a beautifully designed modern desktop music player interface.
 3. Run the project Structure |
 
 Take a look!
+
 ![UI](https://github.com/user-attachments/assets/ca518f10-363c-4be5-b581-75f841e8a987)
 
