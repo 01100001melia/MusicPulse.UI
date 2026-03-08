@@ -1,4 +1,4 @@
-# Music Pulse - WPF UI
+# Music Pulse - WPF UI 🎼
 Music Pulse is a beautifully designed modern desktop music player interface.
  preview project (Images/Music Pulse.png)
 - Navigation panel
@@ -14,19 +14,6 @@ Music Pulse is a beautifully designed modern desktop music player interface.
 2. Open in Visual Studio
 3. Run the project
  Project Structure |
-MusicPulse/
-│
-├── Images/        # Contains all image assets 
-├── Core/          # Base classes and helpers 
-├── Theme/         # App themes, colors, styles 
-├── MVVM/          # Views, ViewModels, and Models 
-│   ├── View/
-│   ├── ViewModel/
-│   └── Model/
-│
-├── App.xaml       # App entry point and resources
-├── MainWindow.xaml # Main window containing the overall layout
-
 
 Take a look!
 ![UI](https://github.com/user-attachments/assets/ca518f10-363c-4be5-b581-75f841e8a987)
