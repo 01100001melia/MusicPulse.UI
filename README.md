@@ -1,6 +1,5 @@
 # Music Pulse UI🎼
 Music Pulse is a beautifully designed modern desktop music player interface.
- preview project (Images/Music Pulse.png)
 - Navigation panel
 - Search bar
 - Discover banner
