@@ -9,9 +9,7 @@ Music Pulse is a beautifully designed modern desktop music player interface.
 - WPF
 - XAML
 - MVVM
-1. Clone the repository
-2. Open in Visual Studio
-3. Run the project Structure 
+Run the project Structure in visual studtio
 
 Take a look!🫠
 
